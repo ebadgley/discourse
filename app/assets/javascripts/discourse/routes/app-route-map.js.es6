@@ -137,6 +137,7 @@ export default function() {
       this.route('showParentCategory' + filter.capitalize(), {path: '/c/:parent_category/:category/:tag_id/l/' + filter});
     });
     this.route('intersection', {path: 'intersection/:tag_id/*additional_tags'});
+    this.route('union', {path: 'union/:tag_id/*additional_tags'});
   });
 
   this.route('tagGroups', {path: '/tag_groups', resetNamespace: true}, function() {

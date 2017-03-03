@@ -49,6 +49,7 @@ class TagsController < ::ApplicationController
 
   Discourse.filters.each do |filter|
     define_method("show_#{filter}") do
+      
       @tag_id = params[:tag_id]
       @additional_tags = params[:additional_tag_ids].to_s.split('/')
 
@@ -280,7 +281,8 @@ class TagsController < ::ApplicationController
         options[:no_tags] = true
       else
         options[:tags] = tag_params
-        options[:match_all_tags] = true
+        #options[:match_all_tags] = true #TODO control this from a parameter?
+        options[:match_all_tags] = params[:match_all_tags]
       end
 
       options

@@ -65,7 +65,16 @@ export default Discourse.Route.extend({
 
       this.set('category', category);
     } else if (this.get("additionalTags")) {
-      params.filter = `tags/intersection/${tag_id}/${this.get('additionalTags').join('/')}`;
+      //switch here on the routeName to see if this is a tag intersection or union query
+      if (this.get("routeName") ==="tags.intersection") {
+        params.filter = `tags/intersection/${tag_id}/${this.get('additionalTags').join('/')}`;
+        params.match_all_tags = true;
+        controller.set('tagIntersection',true);
+      } else { //tag.union
+        params.filter = `tags/union/${tag_id}/${this.get('additionalTags').join('/')}`;
+        controller.set('tagIntersection',null);
+        
+      }
       this.set('category', null);
     } else {
       params.filter = `tags/${tag_id}/l/${filter}`;

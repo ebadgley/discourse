@@ -44,6 +44,7 @@ export default Ember.Controller.extend(BulkTopicSelection, {
 
   tag: null,
   additionalTags: null,
+  tagIntersection: null, //this controls how the header is displayed on the page, & vs OR
   list: null,
   canAdminTag: Ember.computed.alias("currentUser.staff"),
   filterMode: null,
