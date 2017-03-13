@@ -229,6 +229,12 @@ en:
     latest: "Latest topics"
     hot: "Hot topics"
     top: "Top topics"
+    top_all: "All time top topics"
+    top_yearly: "Yearly top topics"
+    top_quarterly: "Quarterly top topics"
+    top_monthly: "Monthly top topics"
+    top_weekly: "Weekly top topics"
+    top_daily: "Daily top topics"
     posts: "Latest posts"
     private_posts: "Latest private messages"
     group_posts: "Latest posts from %{group_name}"
@@ -608,6 +614,7 @@ en:
     welcome_to: "Welcome to %{site_name}!"
     approval_required: "A moderator must manually approve your new account before you can access this forum. You'll get an email when your account is approved!"
     missing_session: "We cannot detect if your account was created, please ensure you have cookies enabled."
+    activated: "Sorry, this account has already been activated."
   post_action_types:
     off_topic:
       title: 'Off-Topic'
@@ -1395,6 +1402,8 @@ en:
 
     native_app_install_banner: "Asks recurring visitors to install Discourse native app."
 
+    share_anonymized_statistics: "Share anonymized usage statistics."
+
     max_prints_per_hour_per_user: "Maximum number of /print page impressions (set to 0 to disable)"
 
     full_name_required: "Full name is a required field of a user's profile."
@@ -1638,6 +1647,8 @@ en:
     deactivated: "Was deactivated due to too many bounced emails to '%{email}'."
     deactivated_by_staff: "Deactivated by staff"
     activated_by_staff: "Activated by staff"
+    new_user_typed_too_fast: "New user typed too fast"
+    content_matches_auto_block_regex: "Content matches auto block regex"
     username:
       short: "must be at least %{min} characters"
       long: "must be no more than %{max} characters"
